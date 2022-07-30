@@ -12,6 +12,13 @@ Requires [Node.js](https://nodejs.org/) v4+ to run.
 In order to run you need also to install **serialport-list** as per bellow steps, to identify the device ID so it can be read by the serial-port lib.
 
 ```sh
+$ sudo apt-get install usb-modeswitch
+$ lsusb
+$ sudo usb_modeswitch -v 12d1 -p 14fe -M '55534243123456780000000000000011062000000100000000000000000000'
+```
+
+
+```sh
 $ npm install -g @serialport/list
 $ serialport-list
 ```
